@@ -6,6 +6,14 @@ public class Circle extends Shape {
     super(_x,_y);
     r = _r;
   }
+  public boolean overlap(Shape other) {
+    if(other instanceof Circle) {
+
+    } else if(other instanceof Square) {
+
+    }
+    return false;
+  }
   public double area() {
     return Math.PI * r * r;
   }

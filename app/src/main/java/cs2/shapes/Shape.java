@@ -1,5 +1,4 @@
 package cs2.shapes;
-
 public abstract class Shape {
   protected double x;
   protected double y;
@@ -8,6 +7,7 @@ public abstract class Shape {
   }
   public abstract double area();
   public abstract double perimeter();
+  public abstract boolean overlap(Shape other);
   @Override
   public String toString() { return "Shape!"; }
 }
