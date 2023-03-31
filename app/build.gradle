@@ -43,3 +43,7 @@ tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+task wrapper(type: Wrapper) {
+   gradleVersion = '7.3' //version required
+}
