@@ -12,15 +12,10 @@ public class Student extends Person {
 		courses.add(c);
 	}
 
-	public int getID() { return 9999; }
+	public double getGPA() { return gpa; }
 
 	@Override
 	public String toString() {
 		return super.toString() + " (Student)";
 	}
-
-	public String getType() {
-		return "Student";
-	}
-
 }

@@ -24,8 +24,6 @@ public abstract class Person {
 		return last + ", " + first + " (" + username + ")";
 	}
 
-	public abstract String getType();
-
 	public String getFirstname() { return first; }
 	public String getLastname() { return last; }
 	public int getID() { return id; }

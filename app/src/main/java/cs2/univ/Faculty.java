@@ -18,9 +18,4 @@ public class Faculty extends Person {
 	public String toString() {
 		return super.toString() + " (Faculty)";
 	}
-
-	public String getType() {
-		return "Faculty";
-	}
-
 }
