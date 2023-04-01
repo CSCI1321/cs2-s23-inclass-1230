@@ -8,9 +8,25 @@ public class Circle extends Shape {
   }
   public boolean overlap(Shape other) {
     if(other instanceof Circle) {
+      Circle c = (Circle)other;
+      double dx = x - c.x;
+      double dy = y - c.y;
+      double dist = Math.sqrt(dx*dx + dy*dy);
+      return dist < r + c.r;
 
-    } else if(other instanceof Square) {
-
+    } else if(other instanceof Rectangle) {
+      /*
+      Rectangle r = (Rectangle)other;
+      double dx = Math.abs(x - r.x);
+      double dy = Math.abs(y - r.y);
+      if(dx > r.w/2 + r) { return false; }
+      if(dy > r.h/2 + r) { return false; }
+      if(dx <= r.w/2) { return true; }
+      if(dy <= r.h/2) { return true; }
+      double cornerDist = Math.pow(dx - r.w/2, 2) +
+                          Math.pow(dy - r.h/2, 2);
+      return cornerDist <= r*r;
+      */
     }
     return false;
   }

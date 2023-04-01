@@ -4,6 +4,22 @@ public class Rectangle extends Shape {
   private double w;
   private double h;
   public boolean overlap(Shape other) {
+    if(other instanceof Rectangle) {
+      /*
+      Rectangle r = (Rectangle)other;
+      double l1 = x - w/2;
+      double r1 = x + w/2;
+      double l2 = r.x - r.w/2;
+      double r2 = r.x + r.w/2;
+      double t1 = y + h/2;
+      double b1 = y - h/2;
+      double t2 = r.y + r.h/2;
+      double b2 = r.y - r.h/2;
+      return !(l1 > r2 || l2 > r1 || t1 < b2 || t2 < b1);
+      */
+    } else if(other instanceof Circle) {
+      
+    }
     return false;
   }
   public Rectangle(double _x, double _y,
