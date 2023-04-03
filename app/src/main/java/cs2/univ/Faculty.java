@@ -1,12 +1,14 @@
 package cs2.univ;
 
-public class Faculty extends Person {
+public class Faculty extends Person implements Payable {
 	private String office;
 
 	public Faculty(String f, String l, String u, String o) {
 		super(f,l,u);
 		office = o;
 	}
+
+	public int getSalary() { return 1000; }
 
 	public String getOffice() { return office; }
 

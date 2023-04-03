@@ -21,5 +21,9 @@ public class PeopleTester {
 		for(Person p : people) {
 			System.out.println(p);
 		}
+
+		System.out.println(me.getSalary());
+		me.pay();
+
 	}
 }

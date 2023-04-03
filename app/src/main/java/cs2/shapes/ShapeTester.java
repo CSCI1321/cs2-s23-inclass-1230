@@ -1,5 +1,7 @@
 package cs2.shapes;
 
+import java.util.*;
+
 public class ShapeTester {
   public static void main(String[] args) {
     Circle c = new Circle(0,0,1);
@@ -13,5 +15,9 @@ public class ShapeTester {
     if(shapes[0] instanceof Circle) {
       System.out.println(((Circle)shapes[0]).getRadius());
     } else { System.out.println("Not a Circle!"); }
+
+    HashSet<Integer> set = new HashSet<Integer>();
+    //Set<Integer> set2 = new Set<Integer>();
+
   }
 }
