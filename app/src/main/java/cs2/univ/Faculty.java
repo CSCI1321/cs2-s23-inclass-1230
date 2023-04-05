@@ -15,7 +15,6 @@ public class Faculty extends Person implements Payable {
 	public void teachCourse(CourseInfo c) {
 		courses.add(c);
 	}
-
 	@Override
 	public String toString() {
 		return super.toString() + " (Faculty)";

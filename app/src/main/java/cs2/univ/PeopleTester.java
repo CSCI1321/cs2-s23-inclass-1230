@@ -1,7 +1,5 @@
 package cs2.univ;
-
 import java.util.*;
-
 public class PeopleTester {
 	public static void main(String[] args) {
 		Faculty me = new Faculty("Matt","Hibbs","mhibbs","CSI 270K");
@@ -24,6 +22,11 @@ public class PeopleTester {
 
 		System.out.println(me.getSalary());
 		me.pay();
+		StudentWorker miley = new StudentWorker("Cyrus", "Miley", "hmontan");
+		miley.pay();
+
+		Payable[] payees = { me, miley };
+		for(Payable p : payees) { p.pay(); }
 
 	}
 }
