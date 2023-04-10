@@ -36,6 +36,6 @@ public class Circle extends Shape {
   public double getRadius() { return r; }
   @Override
   public String toString() {
-    return "Circle: (" + x + "," + y + ") r=" + r;
+    return "Circle: (" + x + "," + y + ") r=" + r + " area=" + area();
   }
 }

@@ -28,4 +28,7 @@ public class Rectangle extends Shape {
   }
   public double area() { return w * h; }
   public double perimeter() { return 2 * (w + h); }
+  public String toString() {
+    return "Rect area=" + area();
+  }
 }
