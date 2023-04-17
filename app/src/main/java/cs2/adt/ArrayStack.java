@@ -1,5 +1,7 @@
 package cs2.adt;
 
+import java.util.EmptyStackException;
+
 public class ArrayStack<T> implements Stack<T> {
   private T[] arr;
   private int len;
@@ -20,10 +22,14 @@ public class ArrayStack<T> implements Stack<T> {
     arr[len] = item;
     len++;
   }
-  public T pop() {
+  public T pop() throws EmptyStackException {
+    if(isEmpty()) throw new EmptyStackException();
     len--;
     return arr[len];
   }
-  public T peek() { return arr[len-1]; }
+  public T peek() throws EmptyStackException {
+    if(isEmpty()) throw new EmptyStackException();
+    return arr[len-1];
+  }
   public boolean isEmpty() { return len == 0; }
 }
