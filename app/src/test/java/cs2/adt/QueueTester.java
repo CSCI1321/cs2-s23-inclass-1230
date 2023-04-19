@@ -11,7 +11,7 @@ public class QueueTester {
 
   @BeforeEach
   void init() {
-    //q = new ArrayQueue<Integer>();
+    q = new ArrayQueue<Integer>();
   }
 
   @Test
