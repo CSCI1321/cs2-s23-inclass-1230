@@ -1,6 +1,6 @@
 package cs2.banking;
 
-public class Customer {
+public class Customer implements Cloneable {
 	private String first;
 	private String last;
 	private int ssn;
@@ -11,8 +11,17 @@ public class Customer {
 		ssn = s;
 	}
 
+	@Override
+	public Object clone() {
+		return new Customer(first, last, ssn);
+	}
+
 	public String toString() {
 		return first + " " + last;
+	}
+
+	public void changeName(String newLast) {
+		last = newLast;
 	}
 
 }

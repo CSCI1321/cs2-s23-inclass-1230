@@ -1,10 +1,10 @@
 package cs2.banking;
 
-public class Account {
+public class Account implements Cloneable {
 	//Fields
 	private int balance;
 	private int num;
-	private Customer owner;
+	public Customer owner;
 	//Constructor
 	public Account(Customer _owner, int _num, int _balance) {
 		owner = _owner;
@@ -16,6 +16,10 @@ public class Account {
 		}
 	}
 	//Methods
+	@Override
+	public Object clone() {
+		return new Account((Customer)this.owner.clone(), this.num, this.balance);
+	}
 	public boolean deposit(int amt) {
 		if(amt > 0) {
 			balance += amt;
